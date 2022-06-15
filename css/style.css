@@ -1,0 +1,51 @@
+/* *RESET* */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* !DEBUG! */
+.box-wrapper {
+    align-content: flex-start;
+}
+/* *MAIN* */
+main {
+    padding: 1rem 0;
+    background-color: aqua;
+}
+/* *box wrapper* */
+.box-wrapper {
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: bisque;
+}
+/* *small boxes* */
+.small-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: red;
+}
+.small-box:hover {
+    border: 1px solid blue;
+    cursor: pointer;
+}
+.box-wrapper.easy .small-box {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+.box-wrapper.normal .small-box {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+.box-wrapper.hard .small-box {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+}
