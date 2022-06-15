@@ -174,12 +174,11 @@ function startGame () {
             } 
         }
 
-
         // *se la lunghezza dell'array "triesArray" corrisponde a "userTries"*
         // *l'utente ha vinto e il gioco termina*
         // *dopodichè partirà un alert con un messaggio "hai vinto!"*
         // *e stampo in pagina il punteggio ottenuto*
-        if (triesArray.length === 2) {
+        if (triesArray.length === userTries) {
             alert("Congratulazioni! Hai vinto!");
             divUserMessage.innerHTML = `Il tuo punteggio è: ${triesArray.length}!`;
             boxWrapper.style.pointerEvents = "none";
